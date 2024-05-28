@@ -1,3 +1,4 @@
+import { plugin } from "postcss";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -8,6 +9,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        neon: "0 0 5px green, 0 0 50px purple",
+      },
+      screens: {
+        'custom': '400px',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -15,6 +22,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+  ]
 };
 export default config;
